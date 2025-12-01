@@ -73,6 +73,12 @@
                         </cellValueFactory>
                     </TableColumn>
 
+                    <TableColumn fx:id="colTotal" text="Valor " prefWidth="220">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="ValorTotal"/>
+                        </cellValueFactory>
+                    </TableColumn>
+
                 </columns>
 
             </TableView>

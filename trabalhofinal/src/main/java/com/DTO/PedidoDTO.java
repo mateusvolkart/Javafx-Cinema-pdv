@@ -6,12 +6,14 @@ public class PedidoDTO {
     private String filme;
     private String sala;
     private String lugares;
+    private Double total;
 
-    public PedidoDTO(int numero, String filme, String sala, String lugares) {
+    public PedidoDTO(int numero, String filme, String sala, String lugares, Double total) {
         this.numero = numero;
         this.filme = filme;
         this.sala = sala;
         this.lugares = lugares;
+        this.total = total;
     }
 
     public String getFilme() {
@@ -28,5 +30,9 @@ public class PedidoDTO {
 
     public int getNumeroPedido() {
         return numero;
+    }
+
+    public Double getValorTotal(){
+        return total;
     }
 }

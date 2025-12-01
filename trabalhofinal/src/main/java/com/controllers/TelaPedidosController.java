@@ -19,6 +19,8 @@ public class TelaPedidosController {
     @FXML private TableColumn<PedidoDTO, String> colFilme;
     @FXML private TableColumn<PedidoDTO, String> colSala;
     @FXML private TableColumn<PedidoDTO, String> colLugares;
+    @FXML private TableColumn<PedidoDTO, Double> colTotal;
+
 
     @FXML
     public void initialize() {
@@ -26,6 +28,8 @@ public class TelaPedidosController {
         colFilme.setCellValueFactory(new PropertyValueFactory<>("filme"));  
         colSala.setCellValueFactory(new PropertyValueFactory<>("sala"));
         colLugares.setCellValueFactory(new PropertyValueFactory<>("lugares"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("valorTotal"));
+        
 
         tabelaPedidos.getItems().setAll(ListaPedidos.getPedidosDesnormalized());
     }

@@ -26,12 +26,11 @@ public class TelaFinalController {
     private String assentos;
     private double total;
     private int numeroPedido;
-    private int precoAssento = 15; 
 
     public void setDados(Pedido pedido) {
         this.filme = pedido.getFilmeSelecionado().getNome();
         this.assentos = pedido.getLugarSelecionado();
-        this.total = precoAssento * pedido.getLugarSelecionado().split(", ").length;
+        this.total = pedido.getValorTotal();
         this.numeroPedido = pedido.getNumeroPedido();
 
         labelFilme.setText("Filme: " + filme);

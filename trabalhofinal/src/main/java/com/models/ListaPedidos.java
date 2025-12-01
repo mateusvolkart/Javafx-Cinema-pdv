@@ -24,7 +24,8 @@ public class ListaPedidos {
                 p.getNumeroPedido(),
                 p.getFilmeSelecionado().getNome(),
                 String.valueOf(p.getSalaSelecionada().getNumero()),
-                p.getLugarSelecionado()
+                p.getLugarSelecionado(),
+                p.getValorTotal(),
             );
             lista.add(dto);
         }
