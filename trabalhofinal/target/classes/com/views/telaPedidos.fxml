@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.controllers.TelaPedidosController"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #201f21;">
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              style="-fx-padding: 20px; -fx-background-color: #2b2a2b; -fx-effect: dropshadow(gaussian, #00000044, 10, 0, 0, 3);">
+
+            <Button text="Voltar"
+                    onAction="#voltar"
+                    style="-fx-background-color: #e6455a; 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 16px; 
+                           -fx-padding: 10 20; 
+                           -fx-background-radius: 8;" />
+            
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label text="Pedidos Registrados"
+                   style="-fx-font-size: 24px; 
+                          -fx-font-weight: bold; 
+                          -fx-text-fill: white;" />
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER"
+              style="-fx-padding: 30;">
+            
+            <TableView fx:id="tabelaPedidos"
+                       prefHeight="450"
+                       prefWidth="700"
+                       style="-fx-background-color: #3c3b3d; 
+                              -fx-control-inner-background: #3c3b3d;
+                              -fx-table-cell-border-color: transparent;
+                              -fx-padding: 10;
+                              -fx-background-radius: 10;
+                              -fx-border-radius: 10;
+                              -fx-effect: dropshadow(gaussian, #00000055, 10, 0, 0, 3);">
+
+                <columns>
+
+                    <TableColumn fx:id="colNumero" text="Pedido" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="numeroPedido"/>
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn fx:id="colFilme" text="Filme" prefWidth="260">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="filmeSelecionado"/>
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn fx:id="colSala" text="Sala" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="salaSelecionada"/>
+                        </cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn fx:id="colLugares" text="Lugares" prefWidth="220">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="lugarSelecionado"/>
+                        </cellValueFactory>
+                    </TableColumn>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>
